@@ -16,4 +16,7 @@ def pretty_print_json(data):
 if __name__ == '__main__':
     filepath = input("Введите путь до файла: ")
     json_data = load_data(filepath)
-    pretty_print_json(json_data)
+    if json_data is not None:
+        pretty_print_json(json_data)
+    else:
+        print("Некорректный путь до файла")
